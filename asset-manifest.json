@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/StarWarsApiReact/static/css/main.9283f8d8.chunk.css",
-    "main.js": "/StarWarsApiReact/static/js/main.e081d6d8.chunk.js",
-    "main.js.map": "/StarWarsApiReact/static/js/main.e081d6d8.chunk.js.map",
+    "main.css": "/StarWarsApiReact/static/css/main.c739d1eb.chunk.css",
+    "main.js": "/StarWarsApiReact/static/js/main.db82acae.chunk.js",
+    "main.js.map": "/StarWarsApiReact/static/js/main.db82acae.chunk.js.map",
     "runtime-main.js": "/StarWarsApiReact/static/js/runtime-main.f4fa8637.js",
     "runtime-main.js.map": "/StarWarsApiReact/static/js/runtime-main.f4fa8637.js.map",
-    "static/js/2.9a1ed860.chunk.js": "/StarWarsApiReact/static/js/2.9a1ed860.chunk.js",
-    "static/js/2.9a1ed860.chunk.js.map": "/StarWarsApiReact/static/js/2.9a1ed860.chunk.js.map",
+    "static/js/2.99d875af.chunk.js": "/StarWarsApiReact/static/js/2.99d875af.chunk.js",
+    "static/js/2.99d875af.chunk.js.map": "/StarWarsApiReact/static/js/2.99d875af.chunk.js.map",
     "index.html": "/StarWarsApiReact/index.html",
-    "precache-manifest.19ac83fa9b02d75806f6c8fbb0f79178.js": "/StarWarsApiReact/precache-manifest.19ac83fa9b02d75806f6c8fbb0f79178.js",
+    "precache-manifest.555e328c97d39be126df70b4e13cacba.js": "/StarWarsApiReact/precache-manifest.555e328c97d39be126df70b4e13cacba.js",
     "service-worker.js": "/StarWarsApiReact/service-worker.js",
-    "static/css/main.9283f8d8.chunk.css.map": "/StarWarsApiReact/static/css/main.9283f8d8.chunk.css.map",
-    "static/js/2.9a1ed860.chunk.js.LICENSE.txt": "/StarWarsApiReact/static/js/2.9a1ed860.chunk.js.LICENSE.txt",
+    "static/css/main.c739d1eb.chunk.css.map": "/StarWarsApiReact/static/css/main.c739d1eb.chunk.css.map",
+    "static/js/2.99d875af.chunk.js.LICENSE.txt": "/StarWarsApiReact/static/js/2.99d875af.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/StarWarsApiReact/static/media/137980.fcbea219.jpg",
     "static/media/planets-saturn-img.jpg": "/StarWarsApiReact/static/media/planets-saturn-img.3cd88db7.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f4fa8637.js",
-    "static/js/2.9a1ed860.chunk.js",
-    "static/css/main.9283f8d8.chunk.css",
-    "static/js/main.e081d6d8.chunk.js"
+    "static/js/2.99d875af.chunk.js",
+    "static/css/main.c739d1eb.chunk.css",
+    "static/js/main.db82acae.chunk.js"
   ]
 }
