@@ -12,7 +12,7 @@ export const Paginator = ({pagesCount, currentPage , setPage}) => {
         {pages.map((page) => {
 
             if(page === currentPage) {
-                return <span onClick={setPage.bind(this, page)} key={10001}> <b>{page}</b> </span>
+                return <span  onClick={setPage.bind(this, page)} key={10001}> <b className={"activated"}>{page}</b> </span>
             }
 
             return <span onClick={setPage.bind(this, page)} key={Math.random() * 10000}>{page}</span>

@@ -22,7 +22,7 @@ export const ItemHOK = (Component, subject) => {
 
                     data.map(person => person.id = person.url.match(/\d/g).join(''));
 
-                    this.setState({...this.state, datanone: false, subjects: [...data], isFetching: false});
+                    this.setState({...this.state, datanone: false, subjects: [...data], isFetching: false, currentSubjectName: data[0].name});
 
                 }
             )
@@ -40,8 +40,10 @@ export const ItemHOK = (Component, subject) => {
 
         selectCurrentSubject = (name) => {
             const currentElement = this.state.subjects.findIndex(element => element.name === name);
-            this.setState({...this.state, currentSubject: currentElement})
+            this.setState({...this.state, currentSubject: currentElement, currentSubjectName: name})
         }
+
+
 
         refresher = () => {
 
@@ -53,6 +55,8 @@ export const ItemHOK = (Component, subject) => {
 
             this.getFromServer();
             this.getSomeInfoServer();
+
+
         }
 
         componentDidUpdate(prevProps, prevState, snapshot) {
@@ -68,7 +72,8 @@ export const ItemHOK = (Component, subject) => {
             isFetching: false,
             currentSubject: 0,
             page: 1,
-            pagesCount: null
+            pagesCount: null,
+            currentSubjectName: ''
         }
 
         setPage = (page) => {
@@ -81,7 +86,7 @@ export const ItemHOK = (Component, subject) => {
                 <Component {...this.state.subjects[this.state.currentSubject]} datanone={this.state.datanone} refresher={this.refresher}
                            isFetching={this.state.isFetching} subjects={this.state.subjects}
                            selectCurrentSubject={this.selectCurrentSubject} pagesCount={this.state.pagesCount}
-                           setPage={this.setPage} currentPage={this.state.page}
+                           setPage={this.setPage} currentPage={this.state.page} currentSubjectName={this.state.currentSubjectName}
                 />
             );
         }

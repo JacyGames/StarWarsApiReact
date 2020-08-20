@@ -1,5 +1,11 @@
 .paginator span{
     cursor: pointer;
     margin: 3px;
-    border: 1px solid #000000;
+    color: white;
+    padding: 5px 10px;
+    background: black;
+    border: 1px solid #b2b0a9;
+}
+.activated {
+    color: gold;
 }

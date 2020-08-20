@@ -10,7 +10,7 @@ export const Planet = ({
                            climate, diameter, gravity, id, name, orbital_period, population,
                            rotation_period, surface_water, terrain, datanone, refresher, isFetching,
                            subjects, selectCurrentSubject,
-                           pagesCount, currentPage, setPage
+                           pagesCount, currentPage, setPage, currentSubjectName
                        }) => {
 
     let  imageSource;
@@ -23,13 +23,14 @@ export const Planet = ({
 
 
     return (
-        <div className={"container"}>
-            <Paginator pagesCount={pagesCount} currentPage={currentPage} setPage={setPage} />
+        <div className={"my-card"}>
+            <div className={"my-card-body"}>
+
             {datanone && <ButtonRefresh refresher={refresher}/>}
-            {isFetching ? <Loader/> : <div>
-                <div className={"imageEdit"}>IMAGE of Planet <img src={imageSource} alt=""/></div>
-                <div className={"container"}>
-                    <div>  <div>Climate {climate}</div>
+            {isFetching ? <Loader/> : <div className={"body"}>
+                <div> <img src={imageSource} alt=""/></div>
+                <div className={"info"}>
+                    <div className={"info-exact"}>  <div>Climate {climate}</div>
                         <div>Diameter {diameter}</div>
                         <div>Gravity {gravity}</div>
                         <div>Name {name}</div>
@@ -38,11 +39,17 @@ export const Planet = ({
                         <div>Rotation period {rotation_period}</div>
                         <div>Surface water {surface_water}</div>
                         <div>Terrain {terrain}</div></div>
-                    <div>  {subjects.map(person => <SelectedSubject key={Math.random() * 1000} subject={person} selectCurrentSubject={selectCurrentSubject}/>)}</div>
+                    <div>  {subjects.map(person => <SelectedSubject key={Math.random() * 1000} subject={person}
+                                                                    selectCurrentSubject={selectCurrentSubject}
+                                                                    currentSubjectName={currentSubjectName}/>)}</div>
 
                 </div>
             </div>}
 
+            <div className={"centered"}>
+                <Paginator pagesCount={pagesCount} currentPage={currentPage} setPage={setPage} />
+            </div>
+        </div>
         </div>
     );
 

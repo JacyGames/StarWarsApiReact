@@ -1,15 +1,15 @@
 import React from "react";
-import "../Styles/commonStyle.css"
 import {ButtonRefresh} from "../ButtonRefresh/ButtonRefresh";
 import {Loader} from "../Loading/Loader";
 import {SelectedSubject} from "../SelectedSubject/SelectedSubject";
 import {Paginator} from "../Paginator/Paginator";
+import "../Styles/commonStyle.css"
 
 export const Person = ({
                            birth_year, eye_color, gender, hair_color, height,
                            homeworld, id, mass, name, skin_color, datanone,
                            refresher, isFetching, subjects, selectCurrentSubject,
-                           pagesCount, currentPage, setPage
+                           pagesCount, currentPage, setPage, currentSubjectName
                        }) => {
 
 
@@ -17,13 +17,16 @@ export const Person = ({
 
 
     return (
-        <div className={"container"}>
-            <Paginator pagesCount={pagesCount} currentPage={currentPage} setPage={setPage} />
+        <div className={"my-card"}>
+            <div className={"my-card-body"}>
 
-            {isFetching ? <Loader/> : <div>
+
+
+
+            {isFetching ? <Loader/> : <div className={"body"}>
                 <div><img src={imageSource} alt=""/></div>
-                <div className={"container"}>
-                    <div>
+                <div className={"info"}>
+                    <div className={"info-exact"}>
                         <div>Birth: {birth_year}</div>
                         <div>Eye color: {eye_color}</div>
                         <div>Gender: {gender}</div>
@@ -35,7 +38,10 @@ export const Person = ({
                         <div>Skin color: {skin_color}</div>
                     </div>
                     <div>
-                        {subjects.map(person => <SelectedSubject key={Math.random() * 1000} subject={person} selectCurrentSubject={selectCurrentSubject}/>)}
+                        {subjects.map(person => <SelectedSubject key={Math.random() * 1000} subject={person}
+                                                                 selectCurrentSubject={selectCurrentSubject}
+                                                                 currentSubjectName={currentSubjectName}
+                        />)}
                     </div>
 
                 </div>
@@ -44,8 +50,11 @@ export const Person = ({
 
             }
             {datanone && <ButtonRefresh refresher={refresher}/>}
+            <div className={"centered"}>
+                <Paginator pagesCount={pagesCount} currentPage={currentPage} setPage={setPage} />
+            </div>
 
-
+            </div>
         </div>
     );
 

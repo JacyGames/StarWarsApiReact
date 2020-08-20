@@ -1,7 +1,10 @@
 .subject {
     margin: 10px;
     padding: 5px;
-    border: 2px solid #000000;
+    border: 2px solid gold;
     cursor: pointer;
 
+}
+.selected {
+    color: gold;
 }

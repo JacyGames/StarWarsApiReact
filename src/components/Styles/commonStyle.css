@@ -1,7 +1,27 @@
-.container {
-    display: flex;
-    margin: 50px auto;
+.my-card {
+    max-width: 1300px;
+    margin: 15px auto 0;
+    border: 1px solid #b2b0a9;
 }
+.my-card-body {
+    padding: 20px 40px 15px;
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    color: #b2b0a9;
+}
+.info {
+ display: flex;
+}
+
 .imageEdit img {
     width: 500px;
+}
+.info-exact {
+    margin: 20px 150px 0 0;
+}
+.centered {
+    text-align: center;
 }
